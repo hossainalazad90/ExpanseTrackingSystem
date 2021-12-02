@@ -1,0 +1,64 @@
+﻿@model IEnumerable<ExpanseTrackingSystem.Context.Expanse>
+@{
+    ViewData["Title"] = "Index";
+
+}
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<form asp-action="Index">
+    <div class="row " >
+        <div class="form-group col-5">
+            <label for="FromDate" class="control-label">From Date</label>
+            <input for="FromDate" id="FromDate" type="date" class="form-control" />
+            <span validation-for="FromDate" class="text-danger"></span>
+        </div>
+
+        <div class="form-group col-5">
+            <label for="ToDate" class="control-label">To Date</label>
+            <input for="ToDate" id="ToDate" type="date" class="form-control" />
+            <span validation-for="ToDate" class="text-danger"></span>
+        </div>        
+        <div class="form-group col-2">            
+            <input style="margin-top:32px"  type="button" id="btnSearch" value="Search" class="btn btn-primary form-control" />
+        </div>
+    </div>
+
+</form>
+<div id="SearchDetails">
+    @{Html.RenderPartialAsync("SearchResult", Model); }
+</div>
+
+
+@section Scripts {
+    <script>
+
+        $("#btnSearch").on('click', function () {
+            debugger;
+            var fDate = $("#FromDate").val();
+            var tDate = $("#ToDate").val();
+
+            $.ajax({
+                type: "get",
+                url: "/Expanse/SearchResult",
+                data: {
+                    FromDate: fDate,
+                    ToDate: tDate
+                },
+                success:function(data) {
+                    $("#SearchDetails").empty();
+                    $("#SearchDetails").html(data);
+
+                }, error: function (error)
+                {
+                    alert("Error in Loading Result.");
+                }
+            });
+
+        });
+    </script>
+
+}
+
