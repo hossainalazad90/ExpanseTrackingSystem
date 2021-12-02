@@ -39,7 +39,7 @@
     5.(Index )
         System:Displays all existing Expanse categories in tabular foramt.
           
-    5.Expanse  
+    6.Expanse  
         1(Create)
             User: Select Expanse  Menu from Page Header Dropdown.
             User:Click to Create New Link Button 
