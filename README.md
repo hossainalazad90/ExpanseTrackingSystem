@@ -5,10 +5,12 @@
     Go  : Tools>NuGet Pakage Manager>Package Manager Console.
     Type: Add-Migration Initial.
     Type: Update-Database .   
+    
 3.Clean and Build Project.
 4.Run Project.
 
 5.Expanse Category 
+
     1. (Create)
         User: Select Expanse Category  Menu from Page Header Dropdown.
         User:Click to Create New Link Button. 
@@ -39,7 +41,8 @@
     5. (Index )
         System:Displays all existing Expanse categories in tabular foramt.
           
-6.Expanse  
+6.Expanse 
+
     1. (Create)
         User: Select Expanse  Menu from Page Header Dropdown.
         User:Click to Create New Link Button 
