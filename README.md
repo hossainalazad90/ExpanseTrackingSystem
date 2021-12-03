@@ -7,6 +7,7 @@
     Type: Update-Database .   
 3.Clean and Build Project.
 4.Run Project.
+
 5.Expanse Category 
     1. (Create)
         User: Select Expanse Category  Menu from Page Header Dropdown.
