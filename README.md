@@ -1,12 +1,15 @@
 # ExpanseTrackingSystem
 
 1.Open Project solution file(.sln) file using visual studio(2019).
+
 2.Code First Approch
+
     Go  : Tools>NuGet Pakage Manager>Package Manager Console.
     Type: Add-Migration Initial.
-    Type: Update-Database .   
+    Type: Update-Database.   
     
 3.Clean and Build Project.
+
 4.Run Project.
 
 5.Expanse Category 
